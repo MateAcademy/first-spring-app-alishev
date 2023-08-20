@@ -14,6 +14,7 @@ public class Start {
 
         MusicPlayer musicPlayer = context.getBean("musicPlayer", MusicPlayer.class);
         musicPlayer.playMusic();
+
         context.close();
     }
 }
