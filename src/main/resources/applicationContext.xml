@@ -21,16 +21,16 @@
     </bean>
 
     <bean id="musicBean1"
-          class="ua.klunniy.springcourse.genreOfMusic.impl.ClassicalMusic"/>
+          class="ua.klunniy.springcourse.genreOfMusic.impl.ClassicalMusic" scope="prototype"/>
 
     <bean id="musicBean2"
-          class="ua.klunniy.springcourse.genreOfMusic.impl.RockMusic"/>
+          class="ua.klunniy.springcourse.genreOfMusic.impl.RockMusic" scope="prototype"/>
 
     <bean id="musicBean3"
-          class="ua.klunniy.springcourse.genreOfMusic.impl.RapMusic"/>
+          class="ua.klunniy.springcourse.genreOfMusic.impl.RapMusic" scope="prototype"/>
 
     <bean id="musicPlayer"
-          class="ua.klunniy.springcourse.MusicPlayer">
+          class="ua.klunniy.springcourse.MusicPlayer" scope="prototype">
 <!--        <constructor-arg ref="classicalMusic"/>-->
 <!--        Это внедрение зависимости через сеттер-->
         <property name="music" ref="musicBean1"/>

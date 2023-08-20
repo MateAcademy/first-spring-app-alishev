@@ -12,8 +12,14 @@ public class Start {
 
 //      Music music = context.getBean("classicalMusic", Music.class);
 
-        MusicPlayer musicPlayer = context.getBean("musicPlayer", MusicPlayer.class);
-        musicPlayer.playMusic();
+        MusicPlayer firstmMusicPlayer = context.getBean("musicPlayer", MusicPlayer.class);
+        MusicPlayer secondMusicPlayer = context.getBean("musicPlayer", MusicPlayer.class);
+
+
+        System.out.println(firstmMusicPlayer == secondMusicPlayer);
+
+        System.out.println(firstmMusicPlayer);
+        System.out.println(secondMusicPlayer);
 
         context.close();
     }
