@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:util="http://www.springframework.org/schema/util"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context.xsd http://www.springframework.org/schema/util https://www.springframework.org/schema/util/spring-util.xsd">
+
+    <!--    <bean id="springBean"-->
+    <!--          class="ua.klunniy.springcore.TestBean">-->
+    <!--        <constructor-arg value="Sasha"/>-->
+    <!--    </bean>-->
+
+
+    <bean id="springBean"
+          class="ua.klunniy.springcore.TestBean">
+        <constructor-arg value="Sasha"/>
+    </bean>
+
+
+<!--    <bean id="springBean"-->
+<!--          class="ua.klunniy.springcore.TestBean">-->
+<!--        <constructor-arg value="Sasha"/>-->
+<!--    </bean>-->
+<!--    мы указываем спрингу в каком у нас пакете лежат компоненты-->
+<!--    <context:component-scan base-package="ua.klunniy.springcore"/>-->
+<!--    <context:property-placeholder location="classpath:musicPlayer.properties"/>-->
+
+
+    <!--    <bean id="musicBean1"-->
+    <!--          class="ua.klunniy.springcore.model.impl.ClassicalMusic"-->
+    <!--          factory-method="getClassicalMusic">-->
+    <!--&lt;!&ndash;        <property name="volume" value="50"/>&ndash;&gt;-->
+    <!--    </bean>-->
+
+    <!--    <bean id="musicBean2" class="ua.klunniy.springcore.model.impl.JazzMusic">-->
+    <!--        <property name="volume" value="77"/>-->
+    <!--    </bean>-->
+
+    <!--    <bean id="musicBean3" class="ua.klunniy.springcore.model.impl.RockMusic">-->
+    <!--        <property name="volume" value="${musicPlayer.volume}"/>-->
+    <!--    </bean>-->
+
+    <!--    &lt;!&ndash;    statefull - когда у нашего бина есть изменяемые состояния и тогда мы ставим scope="prototype"&ndash;&gt;-->
+    <!--    <bean id="musicPlayer"-->
+    <!--          class="ua.klunniy.springcore.controller.MusicPlayer"-->
+    <!--          scope="prototype"-->
+    <!--          init-method="doMyInit"-->
+    <!--          destroy-method="doMyDestroy">-->
+    <!--        &lt;!&ndash;        <constructor-arg ref="musicBean"/>&ndash;&gt;-->
+    <!--        <property name="music" ref="musicBean2"/>-->
+    <!--        <property name="name" value="${musicPlayer.name}"/>-->
+    <!--        <property name="volume" value="${musicPlayer.volume}"/>-->
+    <!--        <property name="musicList">-->
+    <!--            <list>-->
+    <!--                <ref bean="musicBean1"/>-->
+    <!--                <ref bean="musicBean2"/>-->
+    <!--                <ref bean="musicBean3"/>-->
+    <!--            </list>-->
+    <!--        </property>-->
+    <!--    </bean>-->
+
+
+    <!--    <context:property-placeholder location="classpath:ua.klunniy.springcore"/>-->
+    <!--    <context:component-scan base-package="ua.klunniy.springcore"/>-->
+
+    <!--    <bean id="rockBean" class="com.klunniy.springcourse.musicGenres.impl.RockGenres"/>-->
+    <!--<constructor-arg value="Serhii"/> -->
+
+    <!--    <bean id="popBean" class="com.klunniy.springcourse.musicGenres.impl.PopGenres"/>-->
+    <!--    <bean id="classicalBean"-->
+    <!--          class="com.klunniy.springcourse.musicGenres.impl.ClassicalGenres"-->
+    <!--          init-method="doMyInit"-->
+    <!--          destroy-method="doMyDestroy"-->
+    <!--          scope="prototype"-->
+    <!--          factory-method="getClassicalMusic"/>-->
+
+    <!--    <bean id="musicPlayer" class="com.klunniy.springcourse.player.MusicPlayer" scope="prototype">-->
+    <!--        &lt;!&ndash;<constructor-arg ref="musicBean"/>&ndash;&gt;-->
+    <!--        &lt;!&ndash;        <property name="music" ref="musicBean"/>&ndash;&gt;-->
+    <!--        <constructor-arg>-->
+    <!--            <list>-->
+    <!--                <ref bean="rockBean"/>-->
+    <!--                <ref bean="popBean"/>-->
+    <!--                <ref bean="classicalBean"/>-->
+    <!--            </list>-->
+    <!--        </constructor-arg>-->
+    <!--        <property name="name" value="${musicPlayer.name}"/>-->
+    <!--        <property name="volume" value="${musicPlayer.volume}"/>-->
+    <!--    </bean>-->
+
+    <!--    <bean id="ukraineFootball"-->
+    <!--          class="com.klunniy.springcourse.musicGenres.impl.UkraineFootball" scope="prototype"-->
+    <!--          init-method="doMyInit"-->
+    <!--          destroy-method="doMyDestroy">-->
+    <!--        <property name="name" value="VICTORY"/>-->
+    <!--    </bean>-->
+</beans>
