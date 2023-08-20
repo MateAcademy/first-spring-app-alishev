@@ -15,22 +15,33 @@
     <!--        <constructor-arg value="Sasha"/>-->
     <!--    </bean>-->
 
-
     <bean id="springBean"
           class="ua.klunniy.springcourse.testBean.TestBean">
         <constructor-arg value="Sasha"/>
     </bean>
 
-    <bean id="classicalMusic" class="ua.klunniy.springcourse.genreOfMusic.impl.ClassicalMusic"/>
-    <bean id="rockMusic" class="ua.klunniy.springcourse.genreOfMusic.impl.RockMusic"/>
+    <bean id="classicalMusic"
+          class="ua.klunniy.springcourse.genreOfMusic.impl.ClassicalMusic"/>
 
-    <bean id="musicPlayer" class="ua.klunniy.springcourse.MusicPlayer">
+    <bean id="rockMusic"
+          class="ua.klunniy.springcourse.genreOfMusic.impl.RockMusic"/>
+
+    <bean id="musicPlayer"
+          class="ua.klunniy.springcourse.MusicPlayer">
 <!--        <constructor-arg ref="classicalMusic"/>-->
 <!--        Это внедрение зависимости через сеттер-->
         <property name="music" ref="classicalMusic"/>
         <property name="name" value="${musicPlayer.name}"/>
         <property name="volume" value="${musicPlayer.volume}"/>
+
+        <property name="musicList" >
+            <list>
+                <ref bean="classicalMusic" />
+                <ref bean="rockMusic" />
+            </list>
+        </property>
     </bean>
+
 
 
 <!--    <bean id="springBean"-->
