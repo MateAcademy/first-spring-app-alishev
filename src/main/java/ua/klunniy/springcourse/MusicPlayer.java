@@ -1,10 +1,14 @@
-package ua.klunniy.springcore;
+package ua.klunniy.springcourse;
 
-import ua.klunniy.springcore.genreOfMusic.Music;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+import ua.klunniy.springcourse.genreOfMusic.Music;
 
 /**
  * @author Serhii Klunniy
  */
+@Data
+@NoArgsConstructor
 public class MusicPlayer {
     private Music music;
 
@@ -15,4 +19,5 @@ public class MusicPlayer {
     public void playMusic() {
         System.out.println(music.getSong());
     }
+
 }

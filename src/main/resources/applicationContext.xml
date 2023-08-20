@@ -9,49 +9,51 @@
         http://www.springframework.org/schema/context/spring-context.xsd http://www.springframework.org/schema/util https://www.springframework.org/schema/util/spring-util.xsd">
 
     <!--    <bean id="springBean"-->
-    <!--          class="ua.klunniy.springcore.testBeanBean.TestBean">-->
+    <!--          class="ua.klunniy.springcourcece.testBeanBean.TestBean">-->
     <!--        <constructor-arg value="Sasha"/>-->
     <!--    </bean>-->
 
 
     <bean id="springBean"
-          class="ua.klunniy.springcore.testBean.TestBean">
+          class="ua.klunniy.springcourse.testBean.TestBean">
         <constructor-arg value="Sasha"/>
     </bean>
 
-    <bean id="classicalMusic" class="ua.klunniy.springcore.genreOfMusic.mpl.ClassicalMusic"/>
+    <bean id="classicalMusic" class="ua.klunniy.springcourse.genreOfMusic.mpl.RockMusic"/>
 
-    <bean id="musicPlayer" class="ua.klunniy.springcore.MusicPlayer">
-        <constructor-arg ref="classicalMusic"/>
+    <bean id="musicPlayer" class="ua.klunniy.springcourse.MusicPlayer">
+<!--        <constructor-arg ref="classicalMusic"/>-->
+<!--        Это внедрение зависимости через сеттер-->
+        <property name="music" ref="classicalMusic"/>
     </bean>
 
 
 <!--    <bean id="springBean"-->
-<!--          class="ua.klunniy.springcore.testBeanBean.TestBean">-->
+<!--          class="ua.klunniy.springcourcece.testBeanBean.TestBean">-->
 <!--        <constructor-arg value="Sasha"/>-->
 <!--    </bean>-->
 <!--    мы указываем спрингу в каком у нас пакете лежат компоненты-->
-<!--    <context:component-scan base-package="ua.klunniy.springcore"/>-->
+<!--    <context:component-scan base-package="ua.klunniy.springcourcece"/>-->
 <!--    <context:property-placeholder location="classpath:musicPlayer.properties"/>-->
 
 
     <!--    <bean id="musicBean1"-->
-    <!--          class="ua.klunniy.springcore.model.impl.ClassicalMusic"-->
+    <!--          class="ua.klunniy.springcourcece.model.impl.ClassicalMusic"-->
     <!--          factory-method="getClassicalMusic">-->
     <!--&lt;!&ndash;        <property name="volume" value="50"/>&ndash;&gt;-->
     <!--    </bean>-->
 
-    <!--    <bean id="musicBean2" class="ua.klunniy.springcore.model.impl.JazzMusic">-->
+    <!--    <bean id="musicBean2" class="ua.klunniy.springcourcece.model.impl.JazzMusic">-->
     <!--        <property name="volume" value="77"/>-->
     <!--    </bean>-->
 
-    <!--    <bean id="musicBean3" class="ua.klunniy.springcore.model.impl.RockMusic">-->
+    <!--    <bean id="musicBean3" class="ua.klunniy.springcourcece.model.impl.RockMusic">-->
     <!--        <property name="volume" value="${musicPlayer.volume}"/>-->
     <!--    </bean>-->
 
     <!--    &lt;!&ndash;    statefull - когда у нашего бина есть изменяемые состояния и тогда мы ставим scope="prototype"&ndash;&gt;-->
     <!--    <bean id="musicPlayer"-->
-    <!--          class="ua.klunniy.springcore.controller.MusicPlayer"-->
+    <!--          class="ua.klunniy.springcourcece.controller.MusicPlayer"-->
     <!--          scope="prototype"-->
     <!--          init-method="doMyInit"-->
     <!--          destroy-method="doMyDestroy">-->
@@ -69,8 +71,8 @@
     <!--    </bean>-->
 
 
-    <!--    <context:property-placeholder location="classpath:ua.klunniy.springcore"/>-->
-    <!--    <context:component-scan base-package="ua.klunniy.springcore"/>-->
+    <!--    <context:property-placeholder location="classpath:ua.klunniy.springcourcece"/>-->
+    <!--    <context:component-scan base-package="ua.klunniy.springcourcece"/>-->
 
     <!--    <bean id="rockBean" class="com.klunniy.springcourse.musicGenres.impl.RockGenres"/>-->
     <!--<constructor-arg value="Serhii"/> -->

@@ -1,4 +1,4 @@
-package ua.klunniy.springcore.testBean;
+package ua.klunniy.springcourse.testBean;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

@@ -1,6 +1,6 @@
-package ua.klunniy.springcore.genreOfMusic.mpl;
+package ua.klunniy.springcourse.genreOfMusic.mpl;
 
-import ua.klunniy.springcore.genreOfMusic.Music;
+import ua.klunniy.springcourse.genreOfMusic.Music;
 
 /**
  * @author Serhii Klunniy

@@ -1,4 +1,4 @@
-package ua.klunniy.springcore.genreOfMusic;
+package ua.klunniy.springcourse.genreOfMusic;
 
 /**
  * @author Serhii Klunniy
