@@ -38,7 +38,7 @@
         <property name="name" value="${musicPlayer.name}"/>
         <property name="volume" value="${musicPlayer.volume}"/>
 
-        <property name="musicList" >
+        <property name="musicList">
             <list>
                 <ref bean="musicBean1"/>
                 <ref bean="musicBean2"/>
