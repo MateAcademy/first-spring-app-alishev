@@ -1,4 +1,4 @@
-package ua.klunniy.springcourse.genreOfMusic.mpl;
+package ua.klunniy.springcourse.genreOfMusic.impl;
 
 import ua.klunniy.springcourse.genreOfMusic.Music;
 
