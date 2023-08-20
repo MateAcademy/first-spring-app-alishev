@@ -9,19 +9,25 @@
         http://www.springframework.org/schema/context/spring-context.xsd http://www.springframework.org/schema/util https://www.springframework.org/schema/util/spring-util.xsd">
 
     <!--    <bean id="springBean"-->
-    <!--          class="ua.klunniy.springcore.TestBean">-->
+    <!--          class="ua.klunniy.springcore.testBeanBean.TestBean">-->
     <!--        <constructor-arg value="Sasha"/>-->
     <!--    </bean>-->
 
 
     <bean id="springBean"
-          class="ua.klunniy.springcore.TestBean">
+          class="ua.klunniy.springcore.testBean.TestBean">
         <constructor-arg value="Sasha"/>
+    </bean>
+
+    <bean id="classicalMusic" class="ua.klunniy.springcore.genreOfMusic.mpl.ClassicalMusic"/>
+
+    <bean id="musicPlayer" class="ua.klunniy.springcore.MusicPlayer">
+        <constructor-arg ref="classicalMusic"/>
     </bean>
 
 
 <!--    <bean id="springBean"-->
-<!--          class="ua.klunniy.springcore.TestBean">-->
+<!--          class="ua.klunniy.springcore.testBeanBean.TestBean">-->
 <!--        <constructor-arg value="Sasha"/>-->
 <!--    </bean>-->
 <!--    мы указываем спрингу в каком у нас пакете лежат компоненты-->

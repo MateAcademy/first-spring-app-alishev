@@ -1,4 +1,4 @@
-package ua.klunniy.springcore;
+package ua.klunniy.springcore.testBean;
 
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
