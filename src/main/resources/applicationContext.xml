@@ -30,7 +30,7 @@
           class="ua.klunniy.springcourse.genreOfMusic.impl.RapMusic" scope="prototype"/>
 
     <bean id="musicPlayer"
-          class="ua.klunniy.springcourse.MusicPlayer" scope="prototype">
+          class="ua.klunniy.springcourse.MusicPlayer" scope="singleton">
 <!--        <constructor-arg ref="classicalMusic"/>-->
 <!--        Это внедрение зависимости через сеттер-->
         <property name="music" ref="musicBean1"/>

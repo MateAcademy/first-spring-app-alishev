@@ -21,6 +21,9 @@ public class Start {
         System.out.println(firstmMusicPlayer);
         System.out.println(secondMusicPlayer);
 
+        firstmMusicPlayer.setVolume(666);
+        System.out.println(secondMusicPlayer.getVolume());
+
         context.close();
     }
 }
