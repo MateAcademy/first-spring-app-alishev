@@ -21,7 +21,9 @@
     </bean>
 
     <bean id="musicBean1"
-          class="ua.klunniy.springcourse.genreOfMusic.impl.ClassicalMusic" scope="prototype"/>
+          class="ua.klunniy.springcourse.genreOfMusic.impl.ClassicalMusic"
+          scope="prototype"
+          factory-method="getInstance"/>
 
     <bean id="musicBean2"
           class="ua.klunniy.springcourse.genreOfMusic.impl.RockMusic" scope="prototype"/>
@@ -30,9 +32,12 @@
           class="ua.klunniy.springcourse.genreOfMusic.impl.RapMusic" scope="prototype"/>
 
     <bean id="musicPlayer"
-          class="ua.klunniy.springcourse.MusicPlayer" scope="singleton">
-<!--        <constructor-arg ref="classicalMusic"/>-->
-<!--        Это внедрение зависимости через сеттер-->
+          class="ua.klunniy.springcourse.MusicPlayer"
+          scope="singleton"
+          init-method="doMyInit"
+          destroy-method="doMyDestroy">
+        <!--        <constructor-arg ref="classicalMusic"/>-->
+        <!--        Это внедрение зависимости через сеттер-->
         <property name="music" ref="musicBean1"/>
 
         <property name="name" value="${musicPlayer.name}"/>
@@ -44,18 +49,18 @@
                 <ref bean="musicBean2"/>
                 <ref bean="musicBean3"/>
             </list>
+
         </property>
     </bean>
 
 
-
-<!--    <bean id="springBean"-->
-<!--          class="ua.klunniy.springcourcece.testBeanBean.TestBean">-->
-<!--        <constructor-arg value="Sasha"/>-->
-<!--    </bean>-->
-<!--    мы указываем спрингу в каком у нас пакете лежат компоненты-->
-<!--    <context:component-scan base-package="ua.klunniy.springcourcece"/>-->
-<!--    <context:property-placeholder location="classpath:musicPlayer.properties"/>-->
+    <!--    <bean id="springBean"-->
+    <!--          class="ua.klunniy.springcourcece.testBeanBean.TestBean">-->
+    <!--        <constructor-arg value="Sasha"/>-->
+    <!--    </bean>-->
+    <!--    мы указываем спрингу в каком у нас пакете лежат компоненты-->
+    <!--    <context:component-scan base-package="ua.klunniy.springcourcece"/>-->
+    <!--    <context:property-placeholder location="classpath:musicPlayer.properties"/>-->
 
 
     <!--    <bean id="musicBean1"-->
