@@ -1,7 +1,11 @@
 package ua.klunniy.springcourse;
 
+import lombok.AccessLevel;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import lombok.experimental.FieldDefaults;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 import ua.klunniy.springcourse.genreOfMusic.Music;
 
 import java.util.ArrayList;
@@ -12,14 +16,16 @@ import java.util.List;
  */
 @Data
 @NoArgsConstructor
+@Component
+@FieldDefaults(level = AccessLevel.PRIVATE)
 public class MusicPlayer {
-    private List<Music> musicList = new ArrayList<>();
 
-    private Music music;
+    List<Music> musicList = new ArrayList<>();
+    Music music;
+    String name;
+    int volume;
 
-    private String name;
-    private int volume;
-
+    @Autowired
     public MusicPlayer(Music music) {
         this.music = music;
     }

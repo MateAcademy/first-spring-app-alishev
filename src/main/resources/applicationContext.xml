@@ -26,33 +26,33 @@
 <!--          scope="prototype"-->
 <!--          factory-method="getInstance"/>-->
 
-    <bean id="musicBean2"
-          class="ua.klunniy.springcourse.genreOfMusic.impl.RockMusic" scope="prototype"/>
+<!--    <bean id="musicBean2"-->
+<!--          class="ua.klunniy.springcourse.genreOfMusic.impl.RockMusic" scope="prototype"/>-->
 
-    <bean id="musicBean3"
-          class="ua.klunniy.springcourse.genreOfMusic.impl.RapMusic" scope="prototype"/>
+<!--    <bean id="musicBean3"-->
+<!--          class="ua.klunniy.springcourse.genreOfMusic.impl.RapMusic" scope="prototype"/>-->
 
-    <bean id="musicPlayer"
-          class="ua.klunniy.springcourse.MusicPlayer"
-          scope="singleton"
-          init-method="doMyInit"
-          destroy-method="doMyDestroy">
-        <!--        <constructor-arg ref="classicalMusic"/>-->
-        <!--        Это внедрение зависимости через сеттер-->
-        <property name="music" ref="musicBean1"/>
+<!--    <bean id="musicPlayer"-->
+<!--          class="ua.klunniy.springcourse.MusicPlayer"-->
+<!--          scope="singleton"-->
+<!--          init-method="doMyInit"-->
+<!--          destroy-method="doMyDestroy">-->
+<!--        &lt;!&ndash;        <constructor-arg ref="classicalMusic"/>&ndash;&gt;-->
+<!--        &lt;!&ndash;        Это внедрение зависимости через сеттер&ndash;&gt;-->
+<!--        <property name="music" ref="musicBean1"/>-->
 
-        <property name="name" value="${musicPlayer.name}"/>
-        <property name="volume" value="${musicPlayer.volume}"/>
+<!--        <property name="name" value="${musicPlayer.name}"/>-->
+<!--        <property name="volume" value="${musicPlayer.volume}"/>-->
 
-        <property name="musicList">
-            <list>
-                <ref bean="musicBean1"/>
-                <ref bean="musicBean2"/>
-                <ref bean="musicBean3"/>
-            </list>
+<!--        <property name="musicList">-->
+<!--            <list>-->
+<!--                <ref bean="musicBean1"/>-->
+<!--                <ref bean="musicBean2"/>-->
+<!--                <ref bean="musicBean3"/>-->
+<!--            </list>-->
 
-        </property>
-    </bean>
+<!--        </property>-->
+<!--    </bean>-->
 
 
     <!--    <bean id="springBean"-->
