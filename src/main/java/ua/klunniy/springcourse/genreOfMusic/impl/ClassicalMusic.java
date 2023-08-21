@@ -18,9 +18,7 @@ public class ClassicalMusic implements Music {
     }
 
     public static Music getInstance() {
-        if (instance == null) {
-            instance = new ClassicalMusic();
-        }
-        return instance;
+
+        return new ClassicalMusic();
     }
 }
