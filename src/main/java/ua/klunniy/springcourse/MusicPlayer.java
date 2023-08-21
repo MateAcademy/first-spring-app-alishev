@@ -5,6 +5,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.experimental.FieldDefaults;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 import ua.klunniy.springcourse.genreOfMusic.Music;
 
@@ -26,7 +27,7 @@ public class MusicPlayer {
     int volume;
 
     @Autowired
-    public MusicPlayer(Music music) {
+    public MusicPlayer( @Qualifier("rapMusic") Music music) {
         this.music = music;
     }
 
