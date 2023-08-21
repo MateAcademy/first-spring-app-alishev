@@ -3,6 +3,7 @@ package ua.klunniy.springcourse;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 import ua.klunniy.springcourse.genreOfMusic.Music;
 import ua.klunniy.springcourse.genreOfMusic.impl.ClassicalMusic;
+import ua.klunniy.springcourse.genreOfMusic.impl.RapMusic;
 
 /**
  * @author Serhii Klunniy
@@ -13,8 +14,11 @@ public class Start {
 
         ClassicalMusic musicBean1 = context.getBean("musicBean1", ClassicalMusic.class);
         ClassicalMusic musicBean2 = context.getBean("musicBean1", ClassicalMusic.class);
+        RapMusic rapMusic = context.getBean("rapMusic", RapMusic.class);
+        RapMusic rapMusic2 = context.getBean("musicBean3", RapMusic.class);
 
-        System.out.println(musicBean1 == musicBean2);
+        System.out.println(rapMusic == rapMusic2);
+ //       System.out.println(musicBean1 == musicBean2);
 
 //      Music music = context.getBean("classicalMusic", Music.class);
 
