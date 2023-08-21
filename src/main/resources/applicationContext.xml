@@ -9,6 +9,7 @@
         http://www.springframework.org/schema/context/spring-context.xsd http://www.springframework.org/schema/util https://www.springframework.org/schema/util/spring-util.xsd">
 
     <context:property-placeholder location="classpath:musicPlayer.properties"/>
+    <context:component-scan base-package="ua.klunniy.springcourse"/>
 
     <!--    <bean id="springBean"-->
     <!--          class="ua.klunniy.springcourcece.testBeanBean.TestBean">-->
@@ -20,10 +21,10 @@
         <constructor-arg value="Sasha"/>
     </bean>
 
-    <bean id="musicBean1"
-          class="ua.klunniy.springcourse.genreOfMusic.impl.ClassicalMusic"
-          scope="prototype"
-          factory-method="getInstance"/>
+<!--    <bean id="musicBean1"-->
+<!--          class="ua.klunniy.springcourse.genreOfMusic.impl.ClassicalMusic"-->
+<!--          scope="prototype"-->
+<!--          factory-method="getInstance"/>-->
 
     <bean id="musicBean2"
           class="ua.klunniy.springcourse.genreOfMusic.impl.RockMusic" scope="prototype"/>
