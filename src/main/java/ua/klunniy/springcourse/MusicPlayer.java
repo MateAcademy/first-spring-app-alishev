@@ -27,7 +27,7 @@ public class MusicPlayer {
     int volume;
 
     @Autowired
-    public MusicPlayer( @Qualifier("rapMusic") Music music) {
+    public MusicPlayer(@Qualifier("rapMusic") Music music) {
         this.music = music;
     }
 
