@@ -6,9 +6,13 @@ import lombok.NoArgsConstructor;
 import lombok.experimental.FieldDefaults;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 import ua.klunniy.springcourse.genreOfMusic.Music;
 
+import javax.annotation.PostConstruct;
+import javax.annotation.PreDestroy;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -18,16 +22,22 @@ import java.util.List;
 @Data
 @NoArgsConstructor
 @Component
+@Scope("singleton")
 @FieldDefaults(level = AccessLevel.PRIVATE)
 public class MusicPlayer {
 
     List<Music> musicList = new ArrayList<>();
     Music music;
+
+    @Value("${musicPlayer.name}")
     String name;
+
+    @Value("${musicPlayer.volume}")
     int volume;
 
     @Autowired
-    public MusicPlayer(@Qualifier("rapMusic") Music music) {
+    public MusicPlayer(@Qualifier("rapMusic") Music music, List<Music> musicList) {
+        this.musicList = musicList;
         this.music = music;
     }
 
@@ -41,10 +51,12 @@ public class MusicPlayer {
         System.out.println("volume= " + volume);
     }
 
+    @PreDestroy
     private void doMyInit() {
         System.out.println("init method");
     }
 
+    @PostConstruct
     private void doMyDestroy() {
         System.out.println("destroy method");
     }

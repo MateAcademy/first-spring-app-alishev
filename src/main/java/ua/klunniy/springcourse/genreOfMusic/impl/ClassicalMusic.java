@@ -6,7 +6,7 @@ import ua.klunniy.springcourse.genreOfMusic.Music;
 /**
  * @author Serhii Klunniy
  */
-@Component("musicBean1")
+//@Component("musicBean1")
 public class ClassicalMusic implements Music {
 
     private static Music instance;
@@ -19,8 +19,7 @@ public class ClassicalMusic implements Music {
         return "Hungarian Rhapsody";
     }
 
-    public static Music getInstance() {
-
+    public static ClassicalMusic getInstance() {
         return new ClassicalMusic();
     }
 }
