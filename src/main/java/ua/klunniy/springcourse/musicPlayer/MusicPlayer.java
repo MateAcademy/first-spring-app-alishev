@@ -1,4 +1,4 @@
-package ua.klunniy.springcourse;
+package ua.klunniy.springcourse.musicPlayer;
 
 import lombok.AccessLevel;
 import lombok.Data;
@@ -21,13 +21,13 @@ import java.util.List;
  */
 @Data
 @NoArgsConstructor
-@Component
+//@Component
 @Scope("singleton")
 @FieldDefaults(level = AccessLevel.PRIVATE)
 public class MusicPlayer {
 
-    List<Music> musicList = new ArrayList<>();
     Music music;
+    List<Music> musicList = new ArrayList<>();
 
     @Value("${musicPlayer.name}")
     String name;
@@ -36,7 +36,7 @@ public class MusicPlayer {
     int volume;
 
     @Autowired
-    public MusicPlayer(@Qualifier("rapMusic") Music music, List<Music> musicList) {
+    public MusicPlayer(Music music, List<Music> musicList) {
         this.musicList = musicList;
         this.music = music;
     }

@@ -1,11 +1,10 @@
 package ua.klunniy.springcourse.configuration;
 
 import org.springframework.context.annotation.*;
-import ua.klunniy.springcourse.MusicPlayer;
+import ua.klunniy.springcourse.musicPlayer.MusicPlayer;
 import ua.klunniy.springcourse.genreOfMusic.Music;
-import ua.klunniy.springcourse.genreOfMusic.impl.ClassicalMusic;
+import ua.klunniy.springcourse.genreOfMusic.impl.RapMusic;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
@@ -16,12 +15,18 @@ public class SpringConfig {
 
     @Bean
     @Scope("singleton")
-    public ClassicalMusic musicBean() {
-        return ClassicalMusic.getInstance();
+    public RapMusic rapBean() {
+        return new RapMusic();
     }
 
     @Bean
-    public List<Music> musicPlayer() {
-        return return Arrays.asList(musicBean));
+    public List<Music> musicList() {
+        return Arrays.asList(rapBean());
     }
+
+//    @Bean
+//    public MusicPlayer musicPlayer() {
+//        return new MusicPlayer(rapBean(), musicList());
+//    }
+
 }

@@ -1,25 +1,25 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<beans xmlns="http://www.springframework.org/schema/beans"
-       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-       xmlns:context="http://www.springframework.org/schema/context"
-       xmlns:util="http://www.springframework.org/schema/util"
-       xsi:schemaLocation="http://www.springframework.org/schema/beans
-        http://www.springframework.org/schema/beans/spring-beans.xsd
-        http://www.springframework.org/schema/context
-        http://www.springframework.org/schema/context/spring-context.xsd http://www.springframework.org/schema/util https://www.springframework.org/schema/util/spring-util.xsd">
+<!--<?xml version="1.0" encoding="UTF-8"?>-->
+<!--<beans xmlns="http://www.springframework.org/schema/beans"-->
+<!--       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"-->
+<!--       xmlns:context="http://www.springframework.org/schema/context"-->
+<!--       xmlns:util="http://www.springframework.org/schema/util"-->
+<!--       xsi:schemaLocation="http://www.springframework.org/schema/beans-->
+<!--        http://www.springframework.org/schema/beans/spring-beans.xsd-->
+<!--        http://www.springframework.org/schema/context-->
+<!--        http://www.springframework.org/schema/context/spring-context.xsd http://www.springframework.org/schema/util https://www.springframework.org/schema/util/spring-util.xsd">-->
 
-    <context:component-scan base-package="ua.klunniy.springcourse"/>
-    <context:property-placeholder location="classpath:musicPlayer.properties"/>
+<!--    <context:component-scan base-package="ua.klunniy.springcourse"/>-->
+<!--    <context:property-placeholder location="classpath:musicPlayer.properties"/>-->
 
     <!--    <bean id="springBean"-->
     <!--          class="ua.klunniy.springcourcece.testBeanBean.TestBean">-->
     <!--        <constructor-arg value="Sasha"/>-->
     <!--    </bean>-->
 
-    <bean id="springBean"
-          class="ua.klunniy.springcourse.testBean.TestBean">
-        <constructor-arg value="Sasha"/>
-    </bean>
+<!--    <bean id="springBean"-->
+<!--          class="ua.klunniy.springcourse.testBean.TestBean">-->
+<!--        <constructor-arg value="Sasha"/>-->
+<!--    </bean>-->
 
 <!--    <bean id="musicBean1"-->
 <!--          class="ua.klunniy.springcourse.genreOfMusic.impl.ClassicalMusic"-->
@@ -33,7 +33,7 @@
 <!--          class="ua.klunniy.springcourse.genreOfMusic.impl.RapMusic" scope="prototype"/>-->
 
 <!--    <bean id="musicPlayer"-->
-<!--          class="ua.klunniy.springcourse.MusicPlayer"-->
+<!--          class="ua.klunniy.springcourse.musicPlayer.MusicPlayer"-->
 <!--          scope="singleton"-->
 <!--          init-method="doMyInit"-->
 <!--          destroy-method="doMyDestroy">-->

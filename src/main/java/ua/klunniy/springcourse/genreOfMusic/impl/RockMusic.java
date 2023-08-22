@@ -6,7 +6,7 @@ import ua.klunniy.springcourse.genreOfMusic.Music;
 /**
  * @author Serhii Klunniy
  */
-@Component
+//@Component
 public class RockMusic implements Music {
     @Override
     public String getSong() {
